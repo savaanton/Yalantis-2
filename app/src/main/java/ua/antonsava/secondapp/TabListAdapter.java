@@ -54,6 +54,14 @@ public class TabListAdapter extends BaseAdapter {
 
         final TabRecycleViewData data = getTabRecyclerViewData(position);
 
+        ImageView mImageIcon = (ImageView) view.findViewById(R.id.mark);
+        TextView mTextTitle = (TextView) view.findViewById(R.id.titles);
+        TextView mTextAdress = (TextView) view.findViewById(R.id.adress);
+        TextView mTextData = (TextView) view.findViewById(R.id.data);
+        TextView mTextDays = (TextView) view.findViewById(R.id.days);
+        ImageView mImageLike = (ImageView) view.findViewById(R.id.like);
+        LinearLayout mLinerLayout = (LinearLayout) view.findViewById(R.id.item_layout);
+
         ((ImageView) view.findViewById(R.id.mark)).setImageResource(data.mMark);
         ((ImageView) view.findViewById(R.id.like)).setImageResource(data.mLike);
         ((TextView) view.findViewById(R.id.titles)).setText(data.mTitle);
@@ -63,6 +71,54 @@ public class TabListAdapter extends BaseAdapter {
         LinearLayout linearLayout = (LinearLayout) view.findViewById(R.id.item_layout);
 
         linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(mContext, InformationActivity.class);
+                i.putExtra("viewData", data.getId());
+                mContext.startActivity(i);
+            }
+        });
+        mImageIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(mContext, InformationActivity.class);
+                i.putExtra("viewData", data.getId());
+                mContext.startActivity(i);
+            }
+        });
+        mTextTitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(mContext, InformationActivity.class);
+                i.putExtra("viewData", data.getId());
+                mContext.startActivity(i);
+            }
+        });
+        mTextAdress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(mContext, InformationActivity.class);
+                i.putExtra("viewData", data.getId());
+                mContext.startActivity(i);
+            }
+        });
+        mTextData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(mContext, InformationActivity.class);
+                i.putExtra("viewData", data.getId());
+                mContext.startActivity(i);
+            }
+        });
+        mTextDays.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(mContext, InformationActivity.class);
+                i.putExtra("viewData", data.getId());
+                mContext.startActivity(i);
+            }
+        });
+        mImageLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(mContext, InformationActivity.class);

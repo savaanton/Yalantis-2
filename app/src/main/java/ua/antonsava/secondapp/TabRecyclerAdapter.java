@@ -38,7 +38,6 @@ public class TabRecyclerAdapter extends RecyclerView.Adapter<TabRecyclerAdapter.
         TextView mTextDays;
         ImageView mImageLike;
         LinearLayout mLinerLayout;
-        FrameLayout mFrame;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -73,6 +72,54 @@ public class TabRecyclerAdapter extends RecyclerView.Adapter<TabRecyclerAdapter.
         holder.mImageLike.setImageResource(mTabRecyclerList.get(position).getmLike());
 
         holder.mLinerLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(mContext, InformationActivity.class);
+                i.putExtra("viewData", viewData.getId());
+                mContext.startActivity(i);
+            }
+        });
+        holder.mImageIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(mContext, InformationActivity.class);
+                i.putExtra("viewData", viewData.getId());
+                mContext.startActivity(i);
+            }
+        });
+        holder.mTextTitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(mContext, InformationActivity.class);
+                i.putExtra("viewData", viewData.getId());
+                mContext.startActivity(i);
+            }
+        });
+        holder.mTextAdress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(mContext, InformationActivity.class);
+                i.putExtra("viewData", viewData.getId());
+                mContext.startActivity(i);
+            }
+        });
+        holder.mTextData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(mContext, InformationActivity.class);
+                i.putExtra("viewData", viewData.getId());
+                mContext.startActivity(i);
+            }
+        });
+        holder.mTextDays.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(mContext, InformationActivity.class);
+                i.putExtra("viewData", viewData.getId());
+                mContext.startActivity(i);
+            }
+        });
+        holder.mImageLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(mContext, InformationActivity.class);
